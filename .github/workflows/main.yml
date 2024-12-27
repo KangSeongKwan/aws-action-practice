@@ -34,3 +34,10 @@ jobs:
       - name: Verify JAR file exists
         run: |
           ls target/*.jar
+
+      # 5. Run JAR file
+      - name: Run JAR file exists
+        run: |
+          nohup java -jar target/*.jar &
+          sleep 15 # 애플리케이션이 실행되도록 대기
+          curl -v http://localhost:8080 # 기본 URL로 테스트
