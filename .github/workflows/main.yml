@@ -22,6 +22,7 @@ jobs:
       # 3. application.properties 생성
       - name: Create application.properties
         run: |
+          mkdir -p src/main/resources  # 디렉토리 생성
           echo "${{ secrets.APPLICATION_PROPERTIES }}" > src/main/resources/application.properties
 
       # 4. Maven 빌드
