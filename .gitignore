@@ -18,6 +18,9 @@ local.properties
 # Ignore Properties
 *.properties
 
+# Log file
+*.log
+
 =======
 >>>>>>> 3614e6f (Upload basic project)
 # External tool builders
